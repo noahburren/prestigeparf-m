@@ -1,0 +1,28 @@
+/* styles.css */
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.slide {
+  display: none;
+  position: relative;
+}
+
+.container{
+    width: 40%;
+    text-align: center;
+    padding: 20px;
+    background-color: #f1f1f1;
+}
+
+.fade {
+  animation: fadeEffect 1.5s;
+}
+
+@keyframes fadeEffect {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+}
