@@ -147,10 +147,6 @@ INSERT INTO Perfume (perfume_name, brand_id, lenglevity, sillage) VALUES
 ('Chance Eau Tendre', 5, NULL, NULL),
 ('Chance Eau Vive', 5, NULL, NULL),
 ('Chance Parfum', 5, NULL, NULL),
-('Chanel No 19 Eau de Parfum', 5, NULL, NULL),
-('Chanel No 19 Parfum', 5, NULL, NULL),
-('Chanel No 19 Poudre', 5, NULL, NULL),
-('Chanel N 19', 5, NULL, NULL),
 ('Chanel No 5 Eau de Cologne', 5, NULL, NULL),
 ('Chanel No 5 Eau de Parfum', 5, NULL, NULL),
 ('Chanel No 5 Eau de Toilette', 5, NULL, NULL),
@@ -293,7 +289,7 @@ INSERT INTO Perfume (perfume_name, brand_id, lenglevity, sillage) VALUES
 ('Vendetta Donna', 15, NULL, NULL);
 
 
--- Insert perfumes into the Perfume table
+-- Insert perfumes into the Perfume table Xerjoff
 INSERT INTO Perfume (perfume_name, brand_id, lenglevity, sillage) VALUES
 ('Begum', 16, NULL, NULL),
 ('Harrods Emerald Star', 16, NULL, NULL),
@@ -312,7 +308,7 @@ INSERT INTO Perfume (perfume_name, brand_id, lenglevity, sillage) VALUES
 ('XJ 1861 Renaissance', 16, NULL, NULL),
 ('XJ 1861 Zefiro', 16, NULL, NULL);
 
--- Insert perfumes into the Perfume table
+-- Insert perfumes into the Perfume table Yves Saint Laurent
 INSERT INTO Perfume (perfume_name, brand_id, lenglevity, sillage) VALUES
 ('Eau Libre', 17, NULL, NULL),
 ('Saharienne', 17, NULL, NULL),
