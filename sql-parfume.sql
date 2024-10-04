@@ -16,8 +16,6 @@ CREATE TABLE Perfume (
     perfume_id INT PRIMARY KEY AUTO_INCREMENT,
     perfume_name VARCHAR(255) NOT NULL,
     brand_id INT,
-    lenglevity VARCHAR(100),
-    sillage VARCHAR(100),
     FOREIGN KEY (brand_id) REFERENCES Brand(brand_id)
 );
 
@@ -59,7 +57,7 @@ INSERT INTO Brand (brand_name) VALUES
 ('Carolina Herrera'),
 ('Chanel'),
 ('Dolce & Gabbana'),
-('Geogeo Armani'),
+('Georgio Armani'),
 ('Hugo Boss'),
 ('JPG'),
 ('Lancome'),
@@ -71,279 +69,496 @@ INSERT INTO Brand (brand_name) VALUES
 ('Xerjoff'),
 ('YSL');
 
+-- Insert values into Main_Accords
+INSERT INTO Main_Accords (accord_name) 
+VALUES 
+    ('citrus'),
+    ('fresh spicy'),
+    ('aromatic'),
+    ('green'),
+    ('caramel'),
+    ('terpenic'),
+    ('woody'),
+    ('herbal'),
+    ('fruity'),
+    ('sweet'),
+    ('almond'),
+    ('vanilla'),
+    ('powdery'),
+    ('floral'),
+    ('fresh'),
+    ('musky'),
+    ('leather'),
+    ('animalic'),
+    ('amber'),
+    ('rose'),
+    ('cherry'),
+    ('tuberose'),
+    ('warm spicy'),
+    ('milky'),
+    ('balsamic'),
+    ('patchouli'),
+    ('tobacco'),
+    ('smoky'),
+    ('soft spicy'),
+    ('oud'),
+    ('earthy'),
+    ('cacao'),
+    ('honey'),
+    ('coffee'),
+    ('narcotic'),
+    ('ozonic'),
+    ('marine'),
+    ('aldehydic'),
+    ('nutty');
+
+-- Insert values into Notes
+INSERT INTO Notes (note_name) VALUES 
+('Petitgrain'),
+('Cardamom'),
+('Musk'),
+('Caramel'),
+('Orange'),
+('Sicilian Mandarin'),
+('Bergamot'),
+('Lemon'),
+('Pine Tree'),
+('Coriander'),
+('Lavender'),
+('Jasmine'),
+('Lily-of-the-Valley'),
+('Cypress'),
+('Silver Pine'),
+('Patchouli'),
+('Oakmoss'),
+('Vetiver'),
+('Cedar'),
+('Pink Pepper'),
+('Fig Nectar'),
+('Benzoin'),
+('Sage'),
+('Virginia Cedar'),
+('Juniper'),
+('Bergamot'),
+('Pepper'),
+('Allspice'),
+('Nutmeg'),
+('Jasmine'),
+('White Peach'),
+('Ylang-Ylang'),
+('Bourbon Vanilla'),
+('Cedar'),
+('White Musk'),
+('Tolu Balsam'),
+('Green Almond'),
+('Star Anise'),
+('Grapefruit'),
+('Ginger'),
+('Flowers'),
+('Benzoin'),
+('Musk'),
+('Citron'),
+('Sea Notes'),
+('Rose'),
+('Mastic or Lentisque'),
+('Amber'),
+('Myrtle'),
+('Basil'),
+('Lemon');
+
 -- Insert perfumes into the Perfume table for Acqua di Parma
-INSERT INTO Perfume (perfume_name, brand_id, lenglevity, sillage) VALUES
-('Acqua di Parma Blu Mediterraneo Arancia di Capri', 1, NULL, NULL),
-('Acqua di Parma Blu Mediterraneo Cipresso di Toscana', 1, NULL, NULL),
-('Acqua di Parma Blu Mediterraneo Fico di Amalfi', 1, NULL, NULL),
-('Acqua di Parma Blu Mediterraneo Ginepro di Sardegna', 1, NULL, NULL),
-('Acqua di Parma Blu Mediterraneo Mandorlo di Sicilia', 1, NULL, NULL),
-('Acqua di Parma Blu Mediterraneo Bergamotto di Calabria', 1, NULL, NULL),
-('Acqua di parma Blue Mediterraneo Mirto di Panarea', 1, NULL, NULL);
+INSERT INTO Perfume (perfume_name, brand_id) VALUES
+('Acqua di Parma Blu Mediterraneo Arancia di Capri', 1),
+('Acqua di Parma Blu Mediterraneo Cipresso di Toscana', 1),
+('Acqua di Parma Blu Mediterraneo Fico di Amalfi', 1),
+('Acqua di Parma Blu Mediterraneo Ginepro di Sardegna', 1),
+('Acqua di Parma Blu Mediterraneo Mandorlo di Sicilia', 1),
+('Acqua di Parma Blu Mediterraneo Bergamotto di Calabria', 1),
+('Acqua di Parma Blu Mediterraneo Mirto di Panarea', 1);
 
 -- Insert perfumes into the Perfume table for Burberry
-INSERT INTO Perfume (perfume_name, brand_id, lenglevity, sillage) VALUES
-('Burberry Men', 2, NULL, NULL),
-('Burberry Summer', 2, NULL, NULL),
-('Burberry Summer for Men', 2, NULL, NULL),
-('Burberry Summer for Men 2010', 2, NULL, NULL),
-('Burberry Summer for Men 2011', 2, NULL, NULL),
-('Burberry Summer for Men 2013', 2, NULL, NULL),
-('Burberry Summer for Women 2010', 2, NULL, NULL),
-('Burberry Summer for Women 2011', 2, NULL, NULL),
-('Burberry Summer for Women 2013', 2, NULL, NULL),
-('Burberry Summer Men 2009', 2, NULL, NULL),
-('Burberry Summer Women 2009', 2, NULL, NULL);
+INSERT INTO Perfume (perfume_name, brand_id) VALUES
+('Burberry Men', 2),
+('Burberry Summer', 2),
+('Burberry Summer for Men', 2),
+('Burberry Summer for Men 2010', 2),
+('Burberry Summer for Men 2011', 2),
+('Burberry Summer for Men 2013', 2),
+('Burberry Summer for Women 2010', 2),
+('Burberry Summer for Women 2011', 2),
+('Burberry Summer for Women 2013', 2),
+('Burberry Summer Men 2009', 2),
+('Burberry Summer Women 2009', 2);
 
 
 -- Insert perfumes into the Perfume table for Bvlgari
-INSERT INTO Perfume (perfume_name, brand_id, lenglevity, sillage) VALUES
-('Black', 3, NULL, NULL),
-('Goldea', 3, NULL, NULL),
-('Rose Goldea', 3, NULL, NULL),
-('Amarena', 3, NULL, NULL),
-('Ashlemah', 3, NULL, NULL),
-('Calaluna', 3, NULL, NULL),
-('Lilaia', 3, NULL, NULL),
-('Maravilla', 3, NULL, NULL),
-('Noorah', 3, NULL, NULL),
-('Desiria', 3, NULL, NULL),
-('Irinia', 3, NULL, NULL),
-('Splendia', 3, NULL, NULL),
-('Ambero', 3, NULL, NULL),
-('Garanat', 3, NULL, NULL),
-('Gyan', 3, NULL, NULL),
-('Malakeos', 3, NULL, NULL),
-('Onekh', 3, NULL, NULL),
-('Tygar', 3, NULL, NULL),
-('Lazulia', 3, NULL, NULL),
-('Selima', 3, NULL, NULL),
-('Zahira', 3, NULL, NULL),
-('Omnia', 3, NULL, NULL);
+INSERT INTO Perfume (perfume_name, brand_id) VALUES
+('Black', 3),
+('Goldea', 3),
+('Rose Goldea', 3),
+('Amarena', 3),
+('Ashlemah', 3),
+('Calaluna', 3),
+('Lilaia', 3),
+('Maravilla', 3),
+('Noorah', 3),
+('Desiria', 3),
+('Irinia', 3),
+('Splendia', 3),
+('Ambero', 3),
+('Garanat', 3),
+('Gyan', 3),
+('Malakeos', 3),
+('Onekh', 3),
+('Tygar', 3),
+('Lazulia', 3),
+('Selima', 3),
+('Zahira', 3),
+('Omnia', 3);
 
 -- Insert perfumes into the Perfume table for Carolina Herrera
-INSERT INTO Perfume (perfume_name, brand_id, lenglevity, sillage) VALUES
-('Good Girl', 4, NULL, NULL),
-('Herrera Aqua', 4, NULL, NULL),
-('Chic For Men', 4, NULL, NULL),
-('Chic Limited Red Edition', 4, NULL, NULL),
-('Crystal Chic', 4, NULL, NULL),
-('So Chic Limited Edition', 4, NULL, NULL),
-('Amber Desire', 4, NULL, NULL),
-('Burning Rose', 4, NULL, NULL),
-('Carolina Herrera', 4, NULL, NULL),
-('Herrera Tuberose', 4, NULL, NULL),
-('Mystery Tobacco', 4, NULL, NULL),
-('Neroli Boheme', 4, NULL, NULL),
-('Nightfall Patchouli', 4, NULL, NULL);
+INSERT INTO Perfume (perfume_name, brand_id) VALUES
+('Good Girl', 4),
+('Herrera Aqua', 4),
+('Chic For Men', 4),
+('Chic Limited Red Edition', 4),
+('Crystal Chic', 4),
+('So Chic Limited Edition', 4),
+('Amber Desire', 4),
+('Burning Rose', 4),
+('Carolina Herrera', 4),
+('Herrera Tuberose', 4),
+('Mystery Tobacco', 4),
+('Neroli Boheme', 4),
+('Nightfall Patchouli', 4);
 
 -- Insert perfumes into the Perfume table for Chanel
-INSERT INTO Perfume (perfume_name, brand_id, lenglevity, sillage) VALUES
-('Bleu de Chanel', 5, NULL, NULL),
-('Bleu de Chanel Eau de Parfum', 5, NULL, NULL),
-('Chance Eau de Parfum', 5, NULL, NULL),
-('Chance Eau de Toilette', 5, NULL, NULL),
-('Chance Eau Fraiche', 5, NULL, NULL),
-('Chance Eau Tendre', 5, NULL, NULL),
-('Chance Eau Vive', 5, NULL, NULL),
-('Chance Parfum', 5, NULL, NULL),
-('Chanel No 5 Eau de Cologne', 5, NULL, NULL),
-('Chanel No 5 Eau de Parfum', 5, NULL, NULL),
-('Chanel No 5 Eau de Toilette', 5, NULL, NULL),
-('Chanel No 5 Eau Premiere 2015', 5, NULL, NULL),
-('Chanel No 5 L Eau', 5, NULL, NULL),
-('Chanel No 5 Parfum', 5, NULL, NULL),
-('Chanel N 5', 5, NULL, NULL),
-('Chanel N 5 Eau Premiere', 5, NULL, NULL),
-('Chanel N 5 Elixir Sensuel', 5, NULL, NULL);
+INSERT INTO Perfume (perfume_name, brand_id) VALUES
+('Bleu de Chanel', 5),
+('Bleu de Chanel Eau de Parfum', 5),
+('Chance Eau de Parfum', 5),
+('Chance Eau de Toilette', 5),
+('Chance Eau Fraiche', 5),
+('Chance Eau Tendre', 5),
+('Chance Eau Vive', 5),
+('Chance Parfum', 5),
+('Chanel No 5 Eau de Cologne', 5),
+('Chanel No 5 Eau de Parfum', 5),
+('Chanel No 5 Eau de Toilette', 5),
+('Chanel No 5 Eau Premiere 2015', 5),
+('Chanel No 5 L Eau', 5),
+('Chanel No 5 Parfum', 5),
+('Chanel N 5', 5),
+('Chanel N 5 Eau Premiere', 5),
+('Chanel N 5 Elixir Sensuel', 5);
 
 
 -- Insert perfumes into the Perfume table for Dolce & Gabbana
-INSERT INTO Perfume (perfume_name, brand_id, lenglevity, sillage) VALUES
-('Sicily', 6, NULL, NULL),
-('By', 6, NULL, NULL),
-('Dolce Gabbana Perfume for Babies', 6, NULL, NULL),
-('Dolce Gabbana Pour Femme', 6, NULL, NULL),
-('Dolce Gabbana Pour Femme Intense', 6, NULL, NULL),
-('Dolce Gabbana Pour Homme', 6, NULL, NULL),
-('Dolce Gabbana Pour Homme Intenso', 6, NULL, NULL),
-('The One', 6, NULL, NULL),
-('The One Collector For Men', 6, NULL, NULL),
-('The One Collector For Women', 6, NULL, NULL),
-('The One Desire', 6, NULL, NULL),
-('The One Essence', 6, NULL, NULL),
-('The One for Men', 6, NULL, NULL);
+INSERT INTO Perfume (perfume_name, brand_id) VALUES
+('Sicily', 6),
+('By', 6),
+('Dolce Gabbana Perfume for Babies', 6),
+('Dolce Gabbana Pour Femme', 6),
+('Dolce Gabbana Pour Femme Intense', 6),
+('Dolce Gabbana Pour Homme', 6),
+('Dolce Gabbana Pour Homme Intenso', 6),
+('The One', 6),
+('The One Collector For Men', 6),
+('The One Collector For Women', 6),
+('The One Desire', 6),
+('The One Essence', 6),
+('The One for Men', 6);
 
 
 -- Insert perfumes into the Perfume table for Giorgio Armani
-INSERT INTO Perfume (perfume_name, brand_id, lenglevity, sillage) VALUES
-('Gio', 7, NULL, NULL),
-('Acqua di Gio', 7, NULL, NULL),
-('Acqua di Gio Blue Edition Pour Homme', 7, NULL, NULL),
-('Emporio Armani City Glam for Her', 7, NULL, NULL),
-('Emporio Armani City Glam for Him', 7, NULL, NULL),
-('Si', 7, NULL, NULL),
-('Si Eau de Toilette', 7, NULL, NULL),
-('Si Golden Bow', 7, NULL, NULL),
-('Si Huile de Parfum', 7, NULL, NULL);
+INSERT INTO Perfume (perfume_name, brand_id) VALUES
+('Gio', 7),
+('Acqua di Gio', 7),
+('Acqua di Gio Blue Edition Pour Homme', 7),
+('Emporio Armani City Glam for Her', 7),
+('Emporio Armani City Glam for Him', 7),
+('Si', 7),
+('Si Eau de Toilette', 7),
+('Si Golden Bow', 7),
+('Si Huile de Parfum', 7);
 
 -- Insert perfumes into the Perfume table for Hugo Boss
-INSERT INTO Perfume (perfume_name, brand_id, lenglevity, sillage) VALUES
-('Baldessarini', 8, NULL, NULL),
-('Boss Intense', 8, NULL, NULL),
-('Boss Intense Shimmer Edition', 8, NULL, NULL),
-('Boss Number One', 8, NULL, NULL);
+INSERT INTO Perfume (perfume_name, brand_id) VALUES
+('Baldessarini', 8),
+('Boss Intense', 8),
+('Boss Intense Shimmer Edition', 8),
+('Boss Number One', 8);
 
 -- Insert perfumes into the Perfume table for Jean Paul Gaultier
-INSERT INTO Perfume (perfume_name, brand_id, lenglevity, sillage) VALUES
-('Le Beau Male', 9, NULL, NULL),
-('Le Beau Male Capitaine Collector', 9, NULL, NULL),
-('Le Beau Male Edition Collector', 9, NULL, NULL),
-('Le Beau Male Summer 2014', 9, NULL, NULL),
-('Le Male', 9, NULL, NULL),
-('Ultra Male', 9, NULL, NULL);
+INSERT INTO Perfume (perfume_name, brand_id) VALUES
+('Le Beau Male', 9),
+('Le Beau Male Capitaine Collector', 9),
+('Le Beau Male Edition Collector', 9),
+('Le Beau Male Summer 2014', 9),
+('Le Male', 9),
+('Ultra Male', 9);
 
 -- Insert perfumes into the Perfume table for Lancôme
-INSERT INTO Perfume (perfume_name, brand_id, lenglevity, sillage) VALUES
-('La Vie Est Belle', 10, NULL, NULL),
-('La Vie Est Belle Christmas Edition', 10, NULL, NULL),
-('La Vie Est Belle Edition Limitee', 10, NULL, NULL),
-('La Vie Est Belle Glitter', 10, NULL, NULL),
-('La Vie Est Belle L Eau de Parfum Intense', 10, NULL, NULL),
-('La Vie Est Belle L Eau de Parfum Legere', 10, NULL, NULL),
-('La Vie Est Belle L Eau de Toilette', 10, NULL, NULL),
-('La Vie Est Belle L Extrait de Parfum', 10, NULL, NULL),
-('La Vie Est Belle L Extrait de Parfum by Mellerio dits Meller', 10, NULL, NULL),
-('La Vie Est Belle L Absolu', 10, NULL, NULL),
-('La Vie Est Belle L Eau de Toilette Florale', 10, NULL, NULL),
-('Balafre', 10, NULL, NULL),
-('Climat', 10, NULL, NULL);
+INSERT INTO Perfume (perfume_name, brand_id) VALUES
+('La Vie Est Belle', 10),
+('La Vie Est Belle Christmas Edition', 10),
+('La Vie Est Belle Edition Limitee', 10),
+('La Vie Est Belle Glitter', 10),
+('La Vie Est Belle L Eau de Parfum Intense', 10),
+('La Vie Est Belle L Eau de Parfum Legere', 10),
+('La Vie Est Belle L Eau de Toilette', 10),
+('La Vie Est Belle L Extrait de Parfum', 10),
+('La Vie Est Belle L Extrait de Parfum by Mellerio dits Meller', 10),
+('La Vie Est Belle L Absolu', 10),
+('La Vie Est Belle L Eau de Toilette Florale', 10),
+('Balafre', 10),
+('Climat', 10);
 
 -- Insert perfumes into the Perfume table for Lattafa
-INSERT INTO Perfume (perfume_name, brand_id, lenglevity, sillage) VALUES
-('Al Fursan', 11, NULL, NULL),
-('Ameer Al Oud 2', 11, NULL, NULL),
-('Ameer Al Oudh', 11, NULL, NULL),
-('Musk Al Ghazal', 11, NULL, NULL),
-('Musk Andalusi', 11, NULL, NULL),
-('Nafeas', 11, NULL, NULL),
-('Ser Al Khulood', 11, NULL, NULL),
-('Shahariyaar', 11, NULL, NULL),
-('Shahrazad', 11, NULL, NULL),
-('Oud Al Mamlikah', 11, NULL, NULL),
-('Safwat Al Musk', 11, NULL, NULL);
+INSERT INTO Perfume (perfume_name, brand_id) VALUES
+('Al Fursan', 11),
+('Ameer Al Oud 2', 11),
+('Ameer Al Oudh', 11),
+('Musk Al Ghazal', 11),
+('Musk Andalusi', 11),
+('Nafeas', 11),
+('Ser Al Khulood', 11),
+('Shahariyaar', 11),
+('Shahrazad', 11),
+('Oud Al Mamlikah', 11),
+('Safwat Al Musk', 11);
 
 
 -- Insert perfumes into the Perfume table for Mancera
-INSERT INTO Perfume (perfume_name, brand_id, lenglevity, sillage) VALUES	
-('Amber Roses', 12, NULL, NULL),
-('Roses Greedy', 12, NULL, NULL),
-('Aoud S', 12, NULL, NULL),
-('Black Intensive Aoud', 12, NULL, NULL),
-('Velvet Vanilla', 12, NULL, NULL),
-('Roses Vanille', 12, NULL, NULL),
-('Musk of Flowers', 12, NULL, NULL),
-('Roseaoud Musk', 12, NULL, NULL),
-('Roses Jasmine', 12, NULL, NULL),
-('Wild Fruits', 12, NULL, NULL),
-('Voyage en Arabie Black Intensive Aoud', 12, NULL, NULL),
-('Wild Candy', 12, NULL, NULL),
-('Wild Cherry', 12, NULL, NULL),
-('Wild Leather', 12, NULL, NULL),
-('Wild Rose Oud', 12, NULL, NULL);
+INSERT INTO Perfume (perfume_name, brand_id) VALUES	
+('Amber Roses', 12),
+('Roses Greedy', 12),
+('Aoud S', 12),
+('Black Intensive Aoud', 12),
+('Velvet Vanilla', 12),
+('Roses Vanille', 12),
+('Musk of Flowers', 12),
+('Roseaoud Musk', 12),
+('Roses Jasmine', 12),
+('Wild Fruits', 12),
+('Voyage en Arabie Black Intensive Aoud', 12),
+('Wild Candy', 12),
+('Wild Cherry', 12),
+('Wild Leather', 12),
+('Wild Rose Oud', 12);
 
 -- Insert perfumes into the Perfume table for Parfums de Marly
-INSERT INTO Perfume (perfume_name, brand_id, lenglevity, sillage) VALUES
-('Akaster', 13, NULL, NULL),
-('Athalia', 13, NULL, NULL),
-('Byerley', 13, NULL, NULL),
-('Godolphin', 13, NULL, NULL),
-('Layton', 13, NULL, NULL),
-('Pegasus', 13, NULL, NULL),
-('Safanad', 13, NULL, NULL),
-('Kuhuyan', 13, NULL, NULL),
-('Oajan', 13, NULL, NULL);
+INSERT INTO Perfume (perfume_name, brand_id) VALUES
+('Akaster', 13),
+('Athalia', 13),
+('Byerley', 13),
+('Godolphin', 13),
+('Layton', 13),
+('Pegasus', 13),
+('Safanad', 13),
+('Kuhuyan', 13),
+('Oajan', 13);
 
 -- Insert perfumes into the Perfume table for Tom Ford
-INSERT INTO Perfume (perfume_name, brand_id, lenglevity, sillage) VALUES
-('Grey Vetiver', 14, NULL, NULL),
-('Noir Extreme', 14, NULL, NULL),
-('Noir Pour Femme', 14, NULL, NULL),
-('Violet Blonde', 14, NULL, NULL),
-('White Patchouli', 14, NULL, NULL),
-('Black Orchid', 14, NULL, NULL),
-('Champaca Absolute', 14, NULL, NULL),
-('Italian Cypress', 14, NULL, NULL),
-('Japon Noir', 14, NULL, NULL),
-('Jasmin Rouge', 14, NULL, NULL);
+INSERT INTO Perfume (perfume_name, brand_id) VALUES
+('Grey Vetiver', 14),
+('Noir Extreme', 14),
+('Noir Pour Femme', 14),
+('Violet Blonde', 14),
+('White Patchouli', 14),
+('Black Orchid', 14),
+('Champaca Absolute', 14),
+('Italian Cypress', 14),
+('Japon Noir', 14),
+('Jasmin Rouge', 14);
 
 -- Insert perfumes into the Perfume table for Valentino
-INSERT INTO Perfume (perfume_name, brand_id, lenglevity, sillage) VALUES
-('Valentina Pink', 15, NULL, NULL),
-('Valentina Poudre', 15, NULL, NULL),
-('Valentina Rosa Assoluto', 15, NULL, NULL),
-('Valentino Donna', 15, NULL, NULL),
-('Valentino Uomo', 15, NULL, NULL),
-('Valentino Uomo 2015', 15, NULL, NULL),
-('Valentino Uomo Intense', 15, NULL, NULL),
-('Vendetta Donna', 15, NULL, NULL);
+INSERT INTO Perfume (perfume_name, brand_id) VALUES
+('Valentina Pink', 15),
+('Valentina Poudre', 15),
+('Valentina Rosa Assoluto', 15),
+('Valentino Donna', 15),
+('Valentino Uomo', 15),
+('Valentino Uomo 2015', 15),
+('Valentino Uomo Intense', 15),
+('Vendetta Donna', 15);
 
 
 -- Insert perfumes into the Perfume table Xerjoff
-INSERT INTO Perfume (perfume_name, brand_id, lenglevity, sillage) VALUES
-('Begum', 16, NULL, NULL),
-('Harrods Emerald Star', 16, NULL, NULL),
-('Gran Ballo', 16, NULL, NULL),
-('Italica', 16, NULL, NULL),
-('La Tosca', 16, NULL, NULL),
-('Lira', 16, NULL, NULL),
-('Mefisto', 16, NULL, NULL),
-('Ivory Route', 16, NULL, NULL),
-('Kind of Blue', 16, NULL, NULL),
-('Zafar', 16, NULL, NULL),
-('Richwood', 16, NULL, NULL),
-('Symphonium', 16, NULL, NULL),
-('XXY', 16, NULL, NULL),
-('XJ 1861 Naxos', 16, NULL, NULL),
-('XJ 1861 Renaissance', 16, NULL, NULL),
-('XJ 1861 Zefiro', 16, NULL, NULL);
+INSERT INTO Perfume (perfume_name, brand_id) VALUES
+('Begum', 16),
+('Harrods Emerald Star', 16),
+('Gran Ballo', 16),
+('Italica', 16),
+('La Tosca', 16),
+('Lira', 16),
+('Mefisto', 16),
+('Ivory Route', 16),
+('Kind of Blue', 16),
+('Zafar', 16),
+('Richwood', 16),
+('Symphonium', 16),
+('XXY', 16),
+('XJ 1861 Naxos', 16),
+('XJ 1861 Renaissance', 16),
+('XJ 1861 Zefiro', 16);
 
 -- Insert perfumes into the Perfume table Yves Saint Laurent
-INSERT INTO Perfume (perfume_name, brand_id, lenglevity, sillage) VALUES
-('Eau Libre', 17, NULL, NULL),
-('Saharienne', 17, NULL, NULL),
-('Vice Versa', 17, NULL, NULL),
-('Y', 17, NULL, NULL),
-('Baby Doll', 17, NULL, NULL),
-('Baby Doll Candy Pink', 17, NULL, NULL),
-('Baby Doll Honeymoon Limited Edition', 17, NULL, NULL),
-('Baby Doll Lucky Game', 17, NULL, NULL),
-('L Homme Parfum Intense', 17, NULL, NULL),
-('Black Opium Eau de Toilette', 17, NULL, NULL),
-('Yvresse Champagne', 17, NULL, NULL),
-('Yvresse Eau de Toilette Legere', 17, NULL, NULL);
+INSERT INTO Perfume (perfume_name, brand_id) VALUES
+('Eau Libre', 17),
+('Saharienne', 17),
+('Vice Versa', 17),
+('Y', 17),
+('Baby Doll', 17),
+('Baby Doll Candy Pink', 17),
+('Baby Doll Honeymoon Limited Edition', 17),
+('Baby Doll Lucky Game', 17),
+('L Homme Parfum Intense', 17),
+('Black Opium Eau de Toilette', 17),
+('Yvresse Champagne', 17),
+('Yvresse Eau de Toilette Legere', 17);
 
--- Insert main accords
-INSERT INTO Main_Accords (accord_name) VALUES
-('citrus'),
-('aromatic'),
-('fresh spicy'),
-('fresh'),
-('woody'),
-('rose'),
-('white floral'),
-('tuberose'),
-('animalic'),
-('musky'),
-('powdery'),
-('yellow floral'),
-('earthy'),
-('amber'),
-('floral'),
-('green'),
-('balsamic'),
-('smoky'),
-('oud'),
-('leather'),
-('fruity');
+
+
+-- Insert perfumes into the Perfume table for Acqua di Parma
+INSERT INTO Perfume (perfume_name, brand_id) VALUES
+('Acqua di Parma Blu Mediterraneo Arancia di Capri', 1),
+('Acqua di Parma Blu Mediterraneo Cipresso di Toscana', 1),
+('Acqua di Parma Blu Mediterraneo Fico di Amalfi', 1),
+('Acqua di Parma Blu Mediterraneo Ginepro di Sardegna', 1),
+('Acqua di Parma Blu Mediterraneo Mandorlo di Sicilia', 1),
+('Acqua di Parma Blu Mediterraneo Bergamotto di Calabria', 1),
+('Acqua di Parma Blu Mediterraneo Mirto di Panarea', 1);
+
+-- Insert into Main_Accords
+INSERT INTO Main_Accords (accord_name) 
+VALUES 
+    ('citrus'),
+    ('fresh spicy'),
+    ('aromatic'),
+    ('green'),
+    ('caramel'),
+    ('terpenic'),
+    ('woody'),
+    ('herbal'),
+    ('fruity'),
+    ('sweet'),
+    ('almond'),
+    ('vanilla'),
+    ('powdery'),
+    ('floral');
+
+-- Insert into Notes
+INSERT INTO Notes (note_name) VALUES 
+('Petitgrain'),
+('Cardamom'),
+('Musk'),
+('Caramel'),
+('Orange'),
+('Sicilian Mandarin'),
+('Bergamot'),
+('Lemon'),
+('Pine Tree'),
+('Coriander'),
+('Lavender'),
+('Jasmine'),
+('Lily-of-the-Valley'),
+('Cypress'),
+('Silver Pine'),
+('Patchouli'),
+('Oakmoss'),
+('Vetiver'),
+('Cedar'),
+('Pink Pepper'),
+('Fig Nectar'),
+('Grapefruit'),
+('Benzoin'),
+('Juniper'),
+('Pepper'),
+('Allspice'),
+('Nutmeg'),
+('White Peach'),
+('Ylang-Ylang'),
+('Bourbon Vanilla'),
+('Star Anise'),
+('Mastic or Lentisque'),
+('Amber'),
+('Myrtle'),
+('Basil');
+
+-- Insert into Perfume_Accords for each perfume
+INSERT INTO Perfume_Accords (perfume_id, accord_id) VALUES
+(1, 1), -- Acqua di Parma Blu Mediterraneo Arancia di Capri, accord_id für "citrus"
+(1, 2), -- accord_id für "fresh spicy"
+(2, 3), -- Acqua di Parma Blu Mediterraneo Cipresso di Toscana, accord_id für "aromatic"
+(2, 4), -- accord_id für "woody"
+(3, 1), -- Acqua di Parma Blu Mediterraneo Fico di Amalfi, accord_id für "fruity"
+(4, 2), -- Acqua di Parma Blu Mediterraneo Ginepro di Sardegna, accord_id für "fresh spicy"
+(5, 3), -- Acqua di Parma Blu Mediterraneo Mandorlo di Sicilia, accord_id für "almond"
+(6, 1), -- Acqua di Parma Blu Mediterraneo Bergamotto di Calabria, accord_id für "citrus"
+(7, 3); -- Acqua di Parma Blu Mediterraneo Mirto di Panarea, accord_id für "aromatic"
+
+-- Insert into Perfume_Notes for each perfume
+INSERT INTO Perfume_Notes (perfume_id, note_id) VALUES
+(1, 1), -- Acqua di Parma Blu Mediterraneo Arancia di Capri, note_id für "Petitgrain"
+(1, 2), -- note_id für "Cardamom"
+(1, 3), -- note_id für "Musk"
+(1, 4), -- note_id für "Caramel"
+(1, 5), -- note_id für "Orange"
+(1, 6), -- note_id für "Sicilian Mandarin"
+(1, 7), -- note_id für "Bergamot"
+(1, 8), -- note_id für "Lemon"
+(2, 9), -- Acqua di Parma Blu Mediterraneo Cipresso di Toscana, note_id für "Pine Tree"
+(2, 10), -- note_id für "Coriander"
+(2, 11), -- note_id für "Lavender"
+(2, 12), -- note_id für "Jasmine"
+(2, 13), -- note_id für "Lily-of-the-Valley"
+(3, 1), -- Acqua di Parma Blu Mediterraneo Fico di Amalfi, note_id für "Petitgrain"
+(3, 2), -- note_id für "Cardamom"
+(3, 14), -- note_id für "Cedar"
+(3, 15), -- note_id für "Fig Tree"
+(3, 16), -- note_id für "Benzoin"
+(4, 17), -- Acqua di Parma Blu Mediterraneo Ginepro di Sardegna, note_id für "Sage"
+(4, 18), -- note_id für "Cypress"
+(5, 19), -- Acqua di Parma Blu Mediterraneo Mandorlo di Sicilia, note_id für "Jasmine"
+(5, 20), -- note_id für "White Peach"
+(5, 21), -- note_id für "Ylang-Ylang"
+(5, 22), -- note_id für "Bourbon Vanilla"
+(6, 1), -- Acqua di Parma Blu Mediterraneo Bergamotto di Calabria, note_id für "Petitgrain"
+(6, 2), -- note_id für "Cardamom"
+(6, 23), -- note_id für "Ginger"
+(6, 24), -- note_id für "Cedar"
+(7, 25), -- Acqua di Parma Blu Mediterraneo Mirto di Panarea, note_id für "Sea Notes"
+(7, 26), -- note_id für "Jasmine"
+(7, 27); -- note_id für "Rose"
+
+
+-- Perfume Accords Inserts
+INSERT INTO Perfume_Accords (perfume_id, accord_id) VALUES
+(8, 3), (8, 7), (8, 2), (8, 4), (8, 13), (8, 8),  -- Burberry Men
+(9, 14), (9, 2), (9, 9), (9, 10), (9, 4),          -- Burberry Summer
+(10, 3), (10, 4), (10, 2), (10, 13), (10, 6),     -- Burberry Summer for Men
+(11, 1), (11, 7), (11, 2), (11, 3), (11, 4),      -- Burberry Summer for Men 2010
+(12, 1), (12, 3), (12, 2), (12, 4), (12, 7),      -- Burberry Summer for Men 2011
+(13, 3), (13, 2), (13, 7), (13, 4), (13, 1),      -- Burberry Summer for Men 2013
+(14, 7), (14, 9), (14, 14), (14, 2), (14, 13), (14, 11),  -- Burberry Summer for Women 2010
+(15, 7), (15, 1), (15, 14), (15, 2), (15, 4),     -- Burberry Summer for Women 2011
+(16, 14), (16, 7), (16, 2), (16, 4), (16, 11),    -- Burberry Summer for Women 2013
+(17, 1), (17, 4), (17, 2), (17, 7), (17, 6),      -- Burberry Summer Men 2009
+(18, 9), (18, 7), (18, 14), (18, 6), (18, 13);     -- Burberry Summer Women 2009
+
+-- Perfume Notes Inserts
+INSERT INTO Perfume_Notes (perfume_id, note_id) VALUES
+(8, 18), (8, 11), (8, 19), (8, 25), (8, 26), (8, 14),  -- Burberry Men
+(9, 1), (9, 15), (9, 3), (9, 5), (9, 6), (9, 4),       -- Burberry Summer
+(10, 1), (10, 6), (10, 16), (10, 19), (10, 25), (10, 26),  -- Burberry Summer for Men
+(11, 7), (11, 17), (11, 22), (11, 25), (11, 20), (11, 19),  -- Burberry Summer for Men 2010
+(12, 1), (12, 2), (12, 3), (12, 4), (12, 5), (12, 14),  -- Burberry Summer for Men 2011
+(13, 1), (13, 6), (13, 11), (13, 19), (13, 18), (13, 12),  -- Burberry Summer for Men 2013
+(14, 1), (14, 2), (14, 6), (14, 7), (14, 10), (14, 26),  -- Burberry Summer for Women 2010
+(15, 1), (15, 2), (15, 6), (15, 7), (15, 10), (15, 19),  -- Burberry Summer for Women 2011
+(16, 1), (16, 2), (16, 6), (16, 7), (16, 10), (16, 14),  -- Burberry Summer for Women 2013
+(17, 1), (17, 4), (17, 2), (17, 7), (17, 6),           -- Burberry Summer Men 2009
+(18, 9), (18, 7), (18, 14), (18, 6), (18, 13);          -- Burberry Summer Women 2009
+
 
