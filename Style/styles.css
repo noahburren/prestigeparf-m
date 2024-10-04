@@ -93,3 +93,50 @@
 .about-box .div2 {
     grid-area: 1 / 2 / 2 / 3; 
 }
+
+.slideshow-container {
+  text-align: center;
+  position: relative;
+  width: 60%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.slide {
+  display: none;
+  position: relative;
+}
+
+.container{
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 13px 13px;
+}
+
+.fade {
+  animation: fadeEffect 1.5s;
+}
+
+@keyframes fadeEffect {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+    
+    .image {
+     grid-area: 1 / 1 / 2 / 2;
+     width: auto;
+     }
+    .text {
+     grid-area: 1 / 2 / 2 / 3;
+     align-content: center;
+    }
