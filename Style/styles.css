@@ -31,7 +31,7 @@
   }
    
   body {
-    margin: var(--header-height) 0 0 0;
+    /* margin: var(--header-height) 0 0 0; */
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
     color: var(--second-color);
@@ -50,6 +50,13 @@
   a {
     text-decoration: none;
   }
+
+/* Logo */
+
+.header-img {
+  width: 20rem;
+  align-items: flex-start;
+}
 
 /* Footer */
 
