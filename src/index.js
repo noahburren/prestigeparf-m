@@ -10,8 +10,18 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 // Rendere die App mit dem Router
 root.render(
   <React.StrictMode>
-    <Router>
-      <App /> {/* Füge den Router hier ein */}
-    </Router>
+      <Router>
+          <header id="header">
+              <div className="logo">
+                  <img id="header-img" src="/images/logopp.png" alt="logo"/>
+              </div>
+          </header>
+          <App/> {/* Füge den Router hier ein */}
+          <footer>
+              <p className="footer_copy">
+                  &#169; Prestige Parfume. Alle Rechte vorbehalten.
+              </p>
+          </footer>
+      </Router>
   </React.StrictMode>
 );

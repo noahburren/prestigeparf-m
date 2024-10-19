@@ -24,11 +24,7 @@ const Home = () => {
 
   return (
     <div>
-      <header id="header">
-        <div className="logo">
-          <img id="header-img" src="/images/logopp.png" alt="logo" />
-        </div>
-      </header>
+
 
       <section>
         <div className="slideshow-container">
@@ -97,11 +93,7 @@ const Home = () => {
         </div>
       </section>
 
-      <footer>
-        <p className="footer_copy">
-          &#169; Prestige Parfume. Alle Rechte vorbehalten.
-        </p>
-      </footer>
+
     </div>
   );
 };
