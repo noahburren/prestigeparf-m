@@ -6,10 +6,10 @@ const app = express();
 
 // CORS Middleware verwenden
 app.use(
-  cors({
-    origin: "http://localhost:3000", // Erlaube nur dein React-Frontend
-    methods: ["GET", "POST"], // Erlaube nur GET und POST
-  })
+    cors({
+      origin: "http://localhost:3000", // Erlaube nur dein React-Frontend
+      methods: ["GET", "POST"], // Erlaube nur GET und POST
+    })
 );
 
 // MySQL-Datenbankverbindung
@@ -25,13 +25,20 @@ db.connect((err) => {
   console.log("MySQL verbunden");
 });
 
-// Route zum Abrufen aller Parfüms
+// Route zum Abrufen aller Parfüms (mit optionalem Markenfilter)
 app.get("/parfums", (req, res) => {
-  const sql = `
+  const brandFilter = req.query.brand; // Lese den optionalen 'brand'-Query-Parameter
+  let sql = `
     SELECT p.perfume_id, p.perfume_name, b.brand_name
     FROM Perfume p
     JOIN Brand b ON p.brand_id = b.brand_id
   `;
+
+  // Wenn ein Markenfilter vorhanden ist, füge eine WHERE-Klausel hinzu
+  if (brandFilter) {
+    sql += ` WHERE b.brand_name IN (${brandFilter.map(brand => `'${brand}'`).join(", ")})`;
+  }
+
   db.query(sql, (err, result) => {
     if (err) {
       console.error(err); // Fehler protokollieren
