@@ -1,99 +1,62 @@
-// src/Home.js
-import React, { useEffect, useCallback, useRef } from "react";
-import "./styles.css"; // Importiere deine CSS-Datei
+import React, { useState, useEffect } from "react";
+import "./styles.css";
 
 const Home = () => {
-  const slideIndex = useRef(0);
-
-  const showSlides = useCallback(() => {
-    let slides = document.getElementsByClassName("slide");
-    for (let i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none"; // Setze alle Slides auf "none"
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const slides = [
+    {
+      image: "/pictures/parfumes/Acqua di Parma Blu Mediterraneo Arancia di Capri.jpeg",
+      title: "Name 1",
+      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi alias esse, perspiciatis iure explicabo expedita reiciendis eius sapiente. Deleniti distinctio fugiat atque perferendis unde pariatur ut molestias reprehenderit fuga iusto!"
+    },
+    {
+      image: "/pictures/parfumes/Nightfall Patchouli.jpeg",
+      title: "Name 2",
+      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi alias esse, perspiciatis iure explicabo expedita reiciendis eius sapiente. Deleniti distinctio fugiat atque perferendis unde pariatur ut molestias reprehenderit fuga iusto!"
+    },
+    {
+      image: "/pictures/parfumes/Desiriajpeg.jpeg",
+      title: "Name 3",
+      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi alias esse, perspiciatis iure explicabo expedita reiciendis eius sapiente. Deleniti distinctio fugiat atque perferendis unde pariatur ut molestias reprehenderit fuga iusto!"
     }
-    slideIndex.current++;
-    if (slideIndex.current > slides.length) {
-      slideIndex.current = 1; // Wenn der Index größer ist, setze ihn zurück
-    }
-    slides[slideIndex.current - 1].style.display = "block"; // Zeige den aktuellen Slide
-    setTimeout(showSlides, 3000); // Wechselt alle 3 Sekunden
-  }, []);
+  ];
 
   useEffect(() => {
-    showSlides(); // Starte die Slideshow
-  }, [showSlides]);
+    const timer = setInterval(() => {
+      setCurrentSlide((prevSlide) => 
+        prevSlide === slides.length - 1 ? 0 : prevSlide + 1
+      );
+    }, 3000);
+
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <div>
-
-
       <section>
         <div className="slideshow-container">
-          <div className="slide fade container">
-            <div className="parent">
-              <div className="image">
-                <img
-                  src="\pictures\parfumes\Acqua di Parma Blu Mediterraneo Arancia di Capri.jpeg" // Bildpfad angepasst
-                  alt="Bild"
-                />
-              </div>
-              <div className="text">
-                <h2>Name 1</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Sequi alias esse, perspiciatis iure explicabo expedita
-                  reiciendis eius sapiente. Deleniti distinctio fugiat atque
-                  perferendis unde pariatur ut molestias reprehenderit fuga
-                  iusto!
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="slide fade container">
-            <div className="parent">
-              <div className="image">
-                <img
-                  src="\pictures\parfumes\Nightfall Patchouli.jpeg" // Bildpfad angepasst
-                  alt="Bild"
-                />
-              </div>
-              <div className="text">
-                <h2>Name 2</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Sequi alias esse, perspiciatis iure explicabo expedita
-                  reiciendis eius sapiente. Deleniti distinctio fugiat atque
-                  perferendis unde pariatur ut molestias reprehenderit fuga
-                  iusto!
-                </p>
+          {slides.map((slide, index) => (
+            <div 
+              key={index}
+              className="slide fade container"
+              style={{ display: currentSlide === index ? 'block' : 'none' }}
+            >
+              <div className="parent">
+                <div className="image">
+                  <img
+                    src={slide.image}
+                    alt={`Slide ${index + 1}`}
+                  />
+                </div>
+                <div className="text">
+                  <h2>{slide.title}</h2>
+                  <p>{slide.description}</p>
+                </div>
               </div>
             </div>
-          </div>
-
-          <div className="slide fade container">
-            <div className="parent">
-              <div className="image">
-                <img
-                  src="\pictures\parfumes\Desiriajpeg.jpeg" // Bildpfad angepasst
-                  alt="Bild"
-                />
-              </div>
-              <div className="text">
-                <h2>Name 3</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Sequi alias esse, perspiciatis iure explicabo expedita
-                  reiciendis eius sapiente. Deleniti distinctio fugiat atque
-                  perferendis unde pariatur ut molestias reprehenderit fuga
-                  iusto!
-                </p>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
-
-
     </div>
   );
 };
