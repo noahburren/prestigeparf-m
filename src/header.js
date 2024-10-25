@@ -6,10 +6,10 @@ const Header = () => {
   return (
     <header className="header">
     <div className="logo">
-       <Link ><img id="header-img" src="/images/logopp.png" alt="logo"/> </Link> 
+       <Link to="/"><img id="header-img" src="/images/logopp.png" alt="logo"/> </Link> 
     </div>
     <nav className="nav">
-    <NavLink to="/" className={({ isActive }) => (isActive ? 'active' : '')}>Home</NavLink>
+    
         <NavLink to="/datenschutz" className={({ isActive }) => (isActive ? 'active' : '')}>Datenschutz</NavLink>
         <NavLink to="/impressum" className={({ isActive }) => (isActive ? 'active' : '')}>Impressum</NavLink>
         <NavLink to="/contact" className={({ isActive }) => (isActive ? 'active' : '')}>Contact</NavLink>
