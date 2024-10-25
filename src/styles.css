@@ -1,0 +1,202 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+:root {
+  --header-height: 3rem;
+  --font-semi: 600;
+  --hue-color: 224;
+  --first-color: hsl(var(--hue-color), 89%, 0%);
+  --second-color: hsl(var(--hue-color), 56%, 12%);
+  --body-font: "Poppins", sans-serif;
+  --big-font-size: 2rem;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: 0.938rem;
+  --smaller-font-size: 0.75rem;
+  --mb-2: 1rem;
+  --mb-4: 2rem;
+  --mb-5: 2.5rem;
+  --mb-6: 3rem;
+
+  /* z index */
+  --z-back: -10;
+  --z-fixed: 100;
+}
+
+/* base */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: var(--header-height) 0 0 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  color: var(--second-color);
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Footer */
+
+.footer {
+  color: #000000;
+  text-align: center;
+  font-weight: var(--font-semi);
+  padding: 2rem 0;
+}
+
+.footer__title {
+  font-size: 2rem;
+  margin-bottom: var(--mb-4);
+}
+
+.footer__icon {
+  font-size: 1.5rem;
+  color: #fff;
+  margin: 0 var(--mb-2);
+}
+
+.footer__copy {
+  font-size: var(--smaller-font-size);
+}
+
+/* about*/
+.about-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+.about-box .div1 {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.about-box .div2 {
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.slideshow-container {
+  text-align: center;
+  position: relative;
+  width: 60%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.slide {
+  display: none;
+  position: relative;
+}
+
+.container {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  background-color: #f1f1f1;
+  border-radius: 13px 13px;
+}
+
+.fade {
+  animation: fadeEffect 1.5s;
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.image {
+  grid-area: 1 / 1 / 2 / 2;
+  width: auto;
+}
+.text {
+  grid-area: 1 / 2 / 2 / 3;
+  align-content: center;
+}
+.perfume-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Immer 3 Spalten */
+  gap: 20px;
+  padding: 20px;
+}
+
+.perfume-card {
+  border: 1px solid #ccc; /* Kantenfarbe beibehalten */
+  padding: 15px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: hsl(
+    var(--hue-color),
+    89%,
+    95%
+  ); /* Helle Hintergrundfarbe */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex; /* Flexbox aktivieren für einheitliche Höhen */
+  flex-direction: column; /* Vertikale Anordnung */
+  justify-content: space-between; /* Platz zwischen Inhalt und Bild */
+}
+
+.perfume-card h3 {
+  font-size: 1em; /* Schriftgröße */
+  color: hsl(var(--hue-color), 56%, 30%); /* Heller Grauton */
+  font-weight: 400; /* Nicht fett */
+}
+
+.perfume-card h2,
+.perfume-card p {
+  color: hsl(var(--hue-color), 56%, 12%); /* Schriftfarbe anpassen */
+}
+
+.perfume-card h2,
+.perfume-card p {
+  color: hsl(var(--hue-color), 56%, 12%); /* Schriftfarbe anpassen */
+}
+
+.perfume-image {
+  width: 100%; /* Bildbreite auf 100% setzen */
+  height: 200px; /* Feste Höhe für Bilder */
+  object-fit: cover; /* Bild anpassen */
+  border-radius: 10px;
+}
+
+/* Platzhalter für fehlende Bilder */
+.perfume-image[src="/pictures/image.png"] {
+  background-color: #e0e0e0; /* Hintergrundfarbe für den Platzhalter */
+  display: flex; /* Flexbox für zentrierten Platzhalter */
+  justify-content: center;
+  align-items: center;
+  color: #999; /* Textfarbe für den Platzhalter */
+  font-size: 14px; /* Schriftgröße für den Platzhalter */
+}
