@@ -7,9 +7,9 @@ const Impressum = () => {
     <div className="impressum">
       <h1>Impressum</h1>
       <p><strong>Betreiber der Webseite:</strong></p>
-      <p>Chadev Development</p>
-      <p>Hohlstrasse 481a</p>
-      <p>CH-8048 Zürich</p>
+      <p>Lorem Ipsum</p>
+      <p>Lorem Ipsum 00</p>
+      <p>CH-0000 Zürich</p>
 
       <p><strong>Telefon:</strong> +00 00 000 00 00</p>
       <p><strong>Email:</strong> <a href="mailto:lorem@ipsum.ch">lorem@ipsum.ch</a></p>
