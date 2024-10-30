@@ -1,21 +1,75 @@
-// src/Datenschutz.js
-import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import "./styles.css";
 
 const Header = () => {
+  const [stickyMenu, setStickyMenu] = useState(false);
+  const [navigationOpen, setNavigationOpen] = useState(false);
+  const location = useLocation();
+
+  const menuData = [
+    { title: "Home", path: "/" },
+    { title: "Über uns", path: "/uber-uns" },
+    { title: "Dienstleistungen", path: "/dienstleistungen" },
+    { title: "Kontakt", path: "/kontakt" }
+  ];
+
+  const handleStickyMenu = () => {
+    if (window.scrollY >= 80) {
+      setStickyMenu(true);
+    } else {
+      setStickyMenu(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleStickyMenu);
+    return () => {
+      window.removeEventListener("scroll", handleStickyMenu);
+    };
+  }, []);
+
   return (
-    <header className="header">
-    <div className="logo">
-       <Link to="/"><img id="header-img" src="/images/logopp.png" alt="logo"/> </Link> 
-    </div>
-    <nav className="nav">
-    
-        <NavLink to="/datenschutz" className={({ isActive }) => (isActive ? 'active' : '')}>Datenschutz</NavLink>
-        <NavLink to="/impressum" className={({ isActive }) => (isActive ? 'active' : '')}>Impressum</NavLink>
-        <NavLink to="/contact" className={({ isActive }) => (isActive ? 'active' : '')}>Contact</NavLink>
-        <NavLink to="/parfums" className={({ isActive }) => (isActive ? 'active' : '')}>Parfums</NavLink>
-        <NavLink to="/parfuminfo" className={({ isActive }) => (isActive ? 'active' : '')}>Parfum Info</NavLink>
-     </nav>
+    <header className={`header ${stickyMenu ? "sticky" : ""}`}>
+      <div className="header-container">
+        <div className="logo-container">
+          <Link to="/">
+            <img
+              src="/images/logopp.png"
+              alt=""
+              className="logo"
+            />
+          </Link>
+        </div>
+
+        <div className="navigation-container">
+          <nav>
+            <button
+              onClick={() => setNavigationOpen(!navigationOpen)}
+              className="mobile-menu-button"
+              aria-label="Mobile Menu"
+            >
+              <span className={`hamburger-line ${navigationOpen ? "rotate-first" : ""}`} />
+              <span className={`hamburger-line ${navigationOpen ? "hidden" : ""}`} />
+              <span className={`hamburger-line ${navigationOpen ? "rotate-last" : ""}`} />
+            </button>
+
+            <ul className={`menu-list ${navigationOpen ? "open" : ""}`}>
+              {menuData.map((menuItem, index) => (
+                <li key={index} className="menu-item">
+                  <Link
+                    to={menuItem.path}
+                    className={location.pathname === menuItem.path ? "active" : ""}
+                    onClick={() => setNavigationOpen(false)}
+                  >
+                    {menuItem.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </div>
+      </div>
     </header>
   );
 };

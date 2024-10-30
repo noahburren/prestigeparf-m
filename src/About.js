@@ -1,15 +1,12 @@
-// src/About.js
 import React from "react";
-import "./styles.css"; // Importiere deine CSS-Datei
+import "./styles.css"; 
 
 const About = () => {
   return (
     <div>
-      <header id="header">
         <div className="logo">
           <img id="header-img" src="/images/logopp.png" alt="logo" />
         </div>
-      </header>
       <h1>Über uns</h1>
       <div className="about-box">
         <div className="divImageAbout">
