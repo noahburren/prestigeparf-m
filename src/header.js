@@ -9,9 +9,11 @@ const Header = () => {
 
   const menuData = [
     { title: "Home", path: "/" },
-    { title: "Über uns", path: "/uber-uns" },
-    { title: "Dienstleistungen", path: "/dienstleistungen" },
-    { title: "Kontakt", path: "/kontakt" }
+    { title: "Parfüme", path: "/parfums" },
+    { title: "Über uns", path: "/about" },
+    { title: "Datenschutz", path: "/datenschutz" },
+    { title: "Impressum", path: "/impressum" },
+    { title: "Kontakt", path: "/contact" }
   ];
 
   const handleStickyMenu = () => {

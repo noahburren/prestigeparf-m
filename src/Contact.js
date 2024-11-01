@@ -3,10 +3,10 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <div>
+    <div class="contact">
       <h1>Kontakt</h1>
       <p>Hier ist die Kontaktseite.</p>
-      {/* Füge hier den Inhalt der Kontaktseite hinzu */}
+      
     </div>
   );
 };
