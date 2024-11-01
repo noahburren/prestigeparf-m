@@ -7,7 +7,7 @@ const About = () => {
       
       <div className="content-wrapper">
             <div className="image-section">
-                <img src="./images/about1.jpg" alt="Parfüm Image"/>
+                <img src="./images/about1.jpg" alt="Parfüm "/>
             </div>
             <div className="text-section">
                 <h2>Über unsere Parfümerie</h2>
