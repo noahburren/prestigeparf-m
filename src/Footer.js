@@ -23,14 +23,28 @@ const Footer = () => {
               </h1>
               <ul>
                 <li>
-                  <a href="/ueberuns">
+                  <a href="/">
+                    <p className="footer-link">
+                      Home
+                    </p>
+                  </a>
+                </li>
+                <li>
+                  <a href="/about">
                     <p className="footer-link">
                       Über uns
                     </p>
                   </a>
                 </li>
                 <li>
-                  <a href="/kontakt">
+                  <a href="/parfums">
+                    <p className="footer-link">
+                      Parfüme
+                    </p>
+                  </a>
+                </li>
+                <li>
+                  <a href="/contact">
                     <p className="footer-link">
                       Kontakt
                     </p>
