@@ -9,10 +9,8 @@ const Header = () => {
 
   const menuData = [
     { title: "Home", path: "/" },
-    { title: "Parfüme", path: "/parfums" },
     { title: "Über uns", path: "/about" },
-    { title: "Datenschutz", path: "/datenschutz" },
-    { title: "Impressum", path: "/impressum" },
+    { title: "Parfüme", path: "/parfums" },
     { title: "Kontakt", path: "/contact" }
   ];
 
