@@ -198,22 +198,23 @@ body {
 
 .about {
   display: flex;
-  padding: 50px 20px;
+  align-content: center;
   background-color: #fff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   max-width: 1200px;
-  margin: 30px 30px 30px;
+  margin: 5%;
+  margin-top: 10%;
 }
 
 .content-wrapper {
   display: flex;
   align-items: center;
-  gap: 30px;
+  margin: 5% 5%;
 }
 
 .image-section img {
-  width: 400px;
+  width: 70%;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
@@ -579,22 +580,9 @@ body {
 }
 
 /* About */
-.about{
-  max-width: 800px;
-  margin-left: 0;
-  padding: 40px 20px;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
-}
 
-.about h1{
-  font-size: 32px;
-  font-weight: 700;
-  margin-top: 3rem;
-  margin-bottom: 1rem;
-  color: #222;
-}
+
+
 
 /* About */
 .contact{
