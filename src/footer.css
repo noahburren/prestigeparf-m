@@ -37,13 +37,15 @@
   }
   
   .footer-content {
-    padding: 80px 0;
+    padding: 9px 0;
     display: flex;
     justify-content: space-between;
   }
   
   .logo-section {
     width: 25%;
+    display: flex;
+    align-items: center;
   }
   
   .logo {
