@@ -46,7 +46,7 @@ const Parfums = () => {
     const clearFilters = () => {
         setSearchTerm("");
         setSelectedBrands([]);
-        setIsDropdownOpen(false); // Dropdown schließen
+        setIsDropdownOpen(false); // Dropdown schliessen
     };
 
     return (
