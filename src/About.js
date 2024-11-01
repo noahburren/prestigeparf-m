@@ -3,10 +3,17 @@ import "./styles.css";
 
 const About = () => {
   return (
-    <div class="about">
+    <div className="about">
       
-      <h1>Über uns</h1>
-      <p>Hallloo isdhfasfagrfsd</p>
+      <div className="content-wrapper">
+            <div className="image-section">
+                <img src="./images/about1.jpg" alt="Parfüm Image"/>
+            </div>
+            <div className="text-section">
+                <h2>Über unsere Parfümerie</h2>
+                <p>Erleben Sie den Luxus und die Eleganz unserer exklusiven Parfümkollektionen. Unsere Düfte sind einzigartig und sorgfältig ausgewählt, um Ihre Sinne zu verzaubern und Ihre Persönlichkeit zu unterstreichen.</p>
+            </div>
+        </div>
       
     </div>
      
