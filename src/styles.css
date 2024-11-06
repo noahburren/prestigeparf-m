@@ -270,6 +270,33 @@ body {
   grid-area: 1 / 2 / 2 / 3;
 }
 
+
+/* home */
+.website-description {
+  width: 80%;
+  max-width: 800px;
+  margin-top: 20px;
+  padding-top: 15px;
+  font-size: 1.1em;
+  text-align: center;
+  color: #555;
+  border-top: 1px solid #ddd;
+  font-style: italic;
+  line-height: 1.6;
+  text-align: center;
+  position: relative;
+  width: 60%;
+  max-width: 1000px;
+  margin: auto;
+  margin-bottom: 5rem;
+}
+
+.title-container{
+  text-align: center;
+  margin-top: 20rem;
+  
+}
+
 .slideshow-container {
   text-align: center;
   position: relative;
@@ -286,8 +313,8 @@ body {
 .container {
   width: 100%;
   text-align: center;
-  margin-top: 10rem;
-  margin-bottom: 10rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
   padding: 20px;
   background-color: #f1f1f1;
   border-radius: 13px 13px;
@@ -585,21 +612,79 @@ body {
 
 /* contact */
 .contact{
-  max-width: 800px;
-  margin-left: 0;
-  padding: 40px 20px;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+
+    display: flex;
+    align-content: center;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 1200px;
+    margin: 5%;
+    margin-top: 10%;
+  
+}
+.form-section {
+  margin-top: 40px;
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 5%;
+}
+
+.form-section h2 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
   color: #333;
 }
 
-.contact h1{
-  font-size: 32px;
-  font-weight: 700;
-  margin-top: 3rem;
-  margin-bottom: 1rem;
-  color: #222;
+.form-group {
+  margin-bottom: 20px;
 }
+
+.form-group label {
+  font-size: 1.1em;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #0073e6;
+  outline: none;
+}
+
+textarea {
+  min-height: 150px;
+}
+
+.submit-button {
+  padding: 12px 20px;
+  font-size: 1.1em;
+  color: #fff;
+  background-color: #0073e6;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #005bb5;
+}
+
 
 
 /* Firmendetails */
@@ -741,3 +826,6 @@ body {
       box-shadow: none;
   }
 }
+
+
+

@@ -7,13 +7,13 @@ const Impressum = () => {
     <div className="impressum">
       <h1>Impressum</h1>
       <p><strong>Betreiber der Webseite:</strong></p>
-      <p>Lorem Ipsum</p>
-      <p>Lorem Ipsum 00</p>
-      <p>CH-0000 Zürich</p>
+      <p>Technische Berufsschule Zürich</p>
+      <p>Ausstellungsstrasse 70</p>
+      <p>8090 Zürich</p>
 
-      <p><strong>Telefon:</strong> +00 00 000 00 00</p>
-      <p><strong>Email:</strong> <a href="mailto:lorem@ipsum.ch">lorem@ipsum.ch</a></p>
-
+      <p><strong>Telefon:</strong> +052 000 00 00</p>
+      <p><strong>Email:</strong> <a href="prestigeparfueme@gmail.ch">prestigeparfueme@gmail.ch</a></p>
+      
       <h2>Haftungsausschluss</h2>
       <p>
         Der Inhalt dieser Webseite wurde von Chadev mit der grösstmöglichen Sorgfalt erstellt und gepflegt.
