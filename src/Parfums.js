@@ -98,7 +98,7 @@ const Parfums = () => {
                             <img
                                 src={`/pictures/parfumes/${perfume.perfume_name
                                     .toLowerCase()
-                                    .replace(/ /g, "_")}.jpeg`}
+                                    }.jpeg`}
                                 alt={perfume.perfume_name}
                                 className="perfume-image"
                             />

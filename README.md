@@ -51,6 +51,13 @@ https://maelfuchs580.atlassian.net/jira/software/projects/KAN/boards/1/backlog
 4. Auf der Kontakseite, hat es ein Kontakformular.
 
 
+### Notizen
+## Gute Ideen
+- Jira als Tool benutzen
+- SQL für Datenbank benutzen
+- In Branches arbeiten
+## Schlechte Idee
+- Zu viele Parfüme benutzen
 
 ### GitHub
 https://github.com/noahburren/prestigeparfume
