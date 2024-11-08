@@ -19,5 +19,8 @@ root.render(
                 <Footer/>
             </div>
         </Router>
-    </React.StrictMode>
+
+    </React.StrictMode>,
+    document.getElementById('root') // Hier wird die App in den HTML-Container mit id="root" gerendert
+
 );
