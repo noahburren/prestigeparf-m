@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/prestigeparfume/static/css/main.6179ca2b.css",
-    "main.js": "/prestigeparfume/static/js/main.0b8fea20.js",
+    "main.js": "/prestigeparfume/static/js/main.b08c6f0f.js",
     "index.html": "/prestigeparfume/index.html",
     "main.6179ca2b.css.map": "/prestigeparfume/static/css/main.6179ca2b.css.map",
-    "main.0b8fea20.js.map": "/prestigeparfume/static/js/main.0b8fea20.js.map"
+    "main.b08c6f0f.js.map": "/prestigeparfume/static/js/main.b08c6f0f.js.map"
   },
   "entrypoints": [
     "static/css/main.6179ca2b.css",
-    "static/js/main.0b8fea20.js"
+    "static/js/main.b08c6f0f.js"
   ]
 }
