@@ -1,5 +1,6 @@
 # prestigeparfume
 
+
 ## Parfüm Marken
 
 	Aqua di Parma
@@ -34,7 +35,7 @@ https://maelfuchs580.atlassian.net/jira/software/projects/KAN/boards/1/backlog
 
 ##### Parfüm-Übersichtsseite
 1. Auf der Übersichtsseite soll man alle Parfüme sehen können. Diese kann man filtrieren und suchen. 
-2. In der Übersichtsseite sieht man das Parfüm mit Name und Preis.
+2. In der Übersichtsseite sieht man das Parfüm mit Name.
 
 ##### Parfüm Details 
 1. Auf der Detailseite kann man alle Informationen, über den Parfüm sehen.
@@ -47,6 +48,7 @@ https://maelfuchs580.atlassian.net/jira/software/projects/KAN/boards/1/backlog
 1. Es gibt eine Impressumseite, wie es sich sich für jede Webseite gehört.
 2. Eine Aboutseite ist auch vorhanden, um das Team vorzustellen. 
 3. Auf der Datenschutzseite, sind informationen über die Datenschutzrechtlinien.
+4. Auf der Kontakseite, hat es ein Kontakformular.
 
 
 
