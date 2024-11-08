@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/prestigeparfume/static/css/main.6179ca2b.css",
+    "main.js": "/prestigeparfume/static/js/main.eff821bb.js",
+    "index.html": "/prestigeparfume/index.html",
+    "main.6179ca2b.css.map": "/prestigeparfume/static/css/main.6179ca2b.css.map",
+    "main.eff821bb.js.map": "/prestigeparfume/static/js/main.eff821bb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6179ca2b.css",
+    "static/js/main.eff821bb.js"
+  ]
+}
