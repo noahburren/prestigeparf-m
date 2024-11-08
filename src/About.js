@@ -1,33 +1,22 @@
-// src/About.js
 import React from "react";
-import "./styles.css"; // Importiere deine CSS-Datei
+import "./styles.css"; 
 
 const About = () => {
   return (
-    <div>
-      <header id="header">
-        <div className="logo">
-          <img id="header-img" src="/images/logopp.png" alt="logo" />
+    <div className="about">
+      
+      <div className="content-wrapper">
+            <div className="image-section">
+                <img src="./images/about1.jpg" alt="Parfüm "/>
+            </div>
+            <div className="text-section">
+                <h2>Über unsere Parfümerie</h2>
+                <p>Erleben Sie den Luxus und die Eleganz unserer exklusiven Parfümkollektionen. Unsere Düfte sind einzigartig und sorgfältig ausgewählt, um Ihre Sinne zu verzaubern und Ihre Persönlichkeit zu unterstreichen.</p>
+            </div>
         </div>
-      </header>
-      <h1>Über uns</h1>
-      <div className="about-box">
-        <div className="divImageAbout">
-          <img src="/images/about.jpg" alt="About" />
-        </div>
-        <div className="divTextAbout">
-          <p>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor...
-          </p>
-        </div>
-      </div>
-      <footer>
-        <p className="footer_copy">
-          &#169; Prestige Parfume. Alle Rechte vorbehalten.
-        </p>
-      </footer>
+      
     </div>
+     
   );
 };
 
